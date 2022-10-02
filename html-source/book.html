@@ -4,26 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Make Bookings</title>
+    <title>Reservations</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-    <style>
-        .my-footer {
-            height: 5rem;
-            padding: 1rem;
-            background-color: #163b65;
-            margin-top: 1.5rem;
-            color: #FFF;
-            font-size: 80%;
-        }
-
-        .room-image {
-            max-width: 50%;
-
-        }
-    </style>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
 </head>
 
 <body>
@@ -68,33 +55,37 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <h1 class="mt-5"> Search for Availability</h1>
-                <form action="reservation.html" method="get">
+            <div class="col">
+             <h1>Make Reservation</h1>
 
-                    <div class="row">
-                        <div class="col">
-                        <div class="form-group">
-                        <label for="start_date" class="form-label">Starting Date</label>
-                        <input required type="date" class="form-control" id="start_date" name="start_date" aria-describedby="startDateHelp">
-                        <div id="startDateHelp" class="form-text">Enter the starting date in the form of YYYY-MM-DD</div>
-                    </div>
+                <form method="post" action="" class="needs-validation" novalidate>
+
+                    <div class="form-group mt-5 mb-3">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" class= "form-control" required autocomplete="off" placeholder="First Name" name="first_name" id="first_name"/>
                     </div>
 
-                    <div class="col">
-                    <div class="form-group">
-                            <label for="end_date" class="form-label">Ending Date</label>
-                            <input required type="date" class="form-control" id="end_date" name="end_date" aria-describedby="endDateHelp">
-                            <div id="endDateHelp" class="form-text">Enter the ending date in the form of YYYY-MM-DD</div>
-                        </div>
-                        </div>
+                    <div class="form-group mb-3">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" required class= "form-control" autocomplete="off" placeholder="Last Name" name="last_name" id="last_name"/>
+                     </div>
+
+                    <div class="form-group mb-3">
+                        <label for="email">Email:</label>
+                        <input type="email" required class= "form-control" autocomplete="off" placeholder="Email" name="email" id="email"/>
                     </div>
-                    <div class="d-grid gap-2 col-6 mx-auto">
-                    <button type="submit" class="btn btn-primary mt-3">Search Availability</button>
+
+                    <div class="form-group mb-3">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" required class= "form-control" autocomplete="off" placeholder="Phone Number" name="phone" id="phone"/>
                     </div>
+
+                    <hr>
+
+                    <input type="submit" class="btn btn-primary" value="Make Reservation"/>
+
+
                 </form>
-
             </div>
         </div>
 
@@ -122,6 +113,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+    <script src="https://unpkg.com/notie"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        
 
 </body>
 
