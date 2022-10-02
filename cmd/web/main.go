@@ -48,7 +48,7 @@ func main() {
 	// _ = http.ListenAndServe(portNumber, nil)
 
 	srv := &http.Server{
-		Addr:    ":5000",
+		Addr:    portNumber,
 		Handler: routes(&app),
 	}
 

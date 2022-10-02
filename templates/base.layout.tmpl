@@ -1,27 +1,209 @@
 {{define "base"}}
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Home-Page</title>
-    <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'/>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    
-    {{block "css" .}}
+  <!doctype html>
+<html lang="en">
 
-    {{end}}
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Make Reservations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker-bs5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/notie/dist/notie.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+  
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Rooms
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/generals-quarters">General's Quarters</a></li>
+                            <li><a class="dropdown-item" href="/majors-suite">Major's Suite</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/search-availability">Book Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
     {{block "content" .}}
 
     {{end}}
 
-    {{block "js" .}}
+   
+     <div class="row my-footer">
+        <div class="col">
+            Left
+        </div>
 
-    {{end}}
-    </body>
-    </html>
+        <div class="col">
+            Middle
+        </div>
+
+        <div class="col">
+            Right
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker-full.min.js"></script>
+        <script src="https://unpkg.com/notie"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+         {{block "js" .}}
+
+         {{end}}
+        <script>
+            let attention = Prompt();
+        (() => {
+                    'use strict'
+                    const forms = document.querySelectorAll('.needs-validation')
+                    Array.from(forms).forEach(form => {
+                        form.addEventListener('submit', event => {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                    });               
+                })()    
+
+              function notify(type, text){
+                notie.alert({
+                    type,
+                    text
+                })
+            }
+
+            function notifyModal(title,html,icon, confirmButtonText='Cool'){
+                  Swal.fire({
+                    title,
+                    html,
+                    icon,
+                    confirmButtonText
+                });
+            }
+
+            function Prompt(){
+                let toast = function(c){
+                    const {title="", icon="success",position="top-end",}=c;
+                   const Toast = Swal.mixin({
+                        toast: true,
+                        title,
+                        position,
+                        icon,
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+
+                    Toast.fire({})
+                }
+
+                 let success = function (c) {
+                   const{title="",text="",footer=""}=c;
+                    Swal.fire({
+                         icon: 'success',
+                         title,
+                         text,
+                         footer,                         
+                     });
+                }
+
+                     let error = function (c) {
+                   const { title = "", text = "", footer = "" } = c;
+                    Swal.fire({
+                        icon: 'error',
+                        title,
+                        text,
+                        footer,
+                    });
+                }
+
+                async function custom(c){
+                    const{title="", html = ""}=c
+
+                   const { value: formValues } = await Swal.fire({
+                        title,
+                        html,
+                        backdrop:false,
+                        focusConfirm: false,
+                        showCancelButton: true,
+                        willOpen:()=>{
+                            const elem = document.getElementById('reservation-dates-modal')
+                            const rp= new DateRangePicker(elem,{
+                                format: 'yyyy-mm-dd',
+                                showOnFocus:true,
+                                orientation: 'top auto'
+                            })
+                        },
+                        preConfirm: () => {
+                            return [
+                                document.getElementById('start').value,
+                                document.getElementById('end').value
+                            ]
+                        },
+                        didOpen: () => {
+                            document.getElementById('start').removeAttribute('disabled');
+                            document.getElementById('end').removeAttribute('disabled');
+                        },
+                    })
+
+                    if (formValues) {
+                        Swal.fire(JSON.stringify(formValues))
+                    }
+                }
+
+                return {
+                    toast,
+                    success,
+                    error,
+                    custom
+                }
+            }
+        </script>
+
+</body>
+
+
+</html>
 {{end}}
