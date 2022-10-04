@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/alexedwards/scs/v2"
-	"github.com/codershubham350/bookings/pkg/config"
-	"github.com/codershubham350/bookings/pkg/handlers"
-	"github.com/codershubham350/bookings/pkg/render"
+	"github.com/codershubham350/bookings/internal/config"
+	"github.com/codershubham350/bookings/internal/handlers"
+	"github.com/codershubham350/bookings/internal/render"
 )
 
 const portNumber = ":8080"
@@ -48,7 +48,7 @@ func main() {
 	// _ = http.ListenAndServe(portNumber, nil)
 
 	srv := &http.Server{
-		Addr:    portNumber,
+		Addr:    ":5000",
 		Handler: routes(&app),
 	}
 
