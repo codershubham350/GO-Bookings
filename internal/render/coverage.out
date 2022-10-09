@@ -1,0 +1,25 @@
+mode: set
+github.com/codershubham350/bookings/internal/render/render.go:23.40,25.2 1 1
+github.com/codershubham350/bookings/internal/render/render.go:27.84,33.2 5 1
+github.com/codershubham350/bookings/internal/render/render.go:36.105,38.18 2 1
+github.com/codershubham350/bookings/internal/render/render.go:52.2,53.9 2 1
+github.com/codershubham350/bookings/internal/render/render.go:58.2,62.16 4 1
+github.com/codershubham350/bookings/internal/render/render.go:66.2,67.16 2 1
+github.com/codershubham350/bookings/internal/render/render.go:71.2,71.12 1 1
+github.com/codershubham350/bookings/internal/render/render.go:38.18,42.3 1 0
+github.com/codershubham350/bookings/internal/render/render.go:42.8,44.3 1 1
+github.com/codershubham350/bookings/internal/render/render.go:53.9,56.3 1 1
+github.com/codershubham350/bookings/internal/render/render.go:62.16,64.3 1 0
+github.com/codershubham350/bookings/internal/render/render.go:67.16,70.3 2 0
+github.com/codershubham350/bookings/internal/render/render.go:75.67,82.16 3 1
+github.com/codershubham350/bookings/internal/render/render.go:87.2,87.29 1 1
+github.com/codershubham350/bookings/internal/render/render.go:110.2,110.21 1 1
+github.com/codershubham350/bookings/internal/render/render.go:82.16,84.3 1 0
+github.com/codershubham350/bookings/internal/render/render.go:87.29,90.17 3 1
+github.com/codershubham350/bookings/internal/render/render.go:94.3,95.17 2 1
+github.com/codershubham350/bookings/internal/render/render.go:99.3,99.23 1 1
+github.com/codershubham350/bookings/internal/render/render.go:107.3,107.21 1 1
+github.com/codershubham350/bookings/internal/render/render.go:90.17,92.4 1 0
+github.com/codershubham350/bookings/internal/render/render.go:95.17,97.4 1 0
+github.com/codershubham350/bookings/internal/render/render.go:99.23,101.18 2 1
+github.com/codershubham350/bookings/internal/render/render.go:101.18,103.5 1 0

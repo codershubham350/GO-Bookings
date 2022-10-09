@@ -15,3 +15,4 @@ Created the bookings and reservations layout using HTML5 and Vanilla JS.
 - Uses [DatePicker](https://github.com/mymth/vanillajs-datepicker) for selecting Arrival/Departure dates.
 - Diplaying notifications using [Notie](https://github.com/jaredreich/notie).
 - Uses [Sweetalert2](https://github.com/sweetalert2/sweetalert2) for creating the modals.
+- Uses [govalidator](https://github.com/asaskevich/govalidator) for validating form module.

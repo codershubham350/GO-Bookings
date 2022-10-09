@@ -2,31 +2,51 @@
 
 {{define "content"}}
  <div class="container">
-
         <div class="row">
             <div class="col">
              <h1>Make Reservation</h1>
                 <h4 style="margin-top:2rem">Reservation Deatails</h4>
-                <form method="post" action="" class="needs-validation" novalidate>
+
+                {{$res := index .Data "reservation"}}
+                <form method="post" action="" class="" novalidate>
+                    <input type="hidden" name="csrf_token" value="{{.CSRFToken}}"/>
+
 
                     <div class="form-group mt-5 mb-3">
                         <label for="first_name">First Name:</label>
-                        <input type="text" class= "form-control" required autocomplete="off" placeholder="First Name" name="first_name" id="first_name"/>
+                        {{with .Form.Errors.Get "first_name"}}
+                            <label class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="text" class= "form-control {{with .Form.Errors.Get "first_name"}} is-invalid {{end}}" 
+                        required autocomplete="off" placeholder="First Name" name="first_name" 
+                        id="first_name" value="{{$res.FirstName}}"/>
                     </div>
 
                     <div class="form-group mb-3">
                         <label for="last_name">Last Name:</label>
-                        <input type="text" required class= "form-control" autocomplete="off" placeholder="Last Name" name="last_name" id="last_name"/>
+                         {{with .Form.Errors.Get "last_name"}}
+                            <label class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="text" required class= "form-control {{with .Form.Errors.Get "last_name"}} is-invalid {{end}}" autocomplete="off" 
+                        placeholder="Last Name" name="last_name" id="last_name" value="{{$res.LastName}}"/>
                      </div>
 
                     <div class="form-group mb-3">
                         <label for="email">Email:</label>
-                        <input type="email" required class= "form-control" autocomplete="off" placeholder="Email" name="email" id="email"/>
+                          {{with .Form.Errors.Get "email"}}
+                            <label class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="email" required class= "form-control {{with .Form.Errors.Get "email"}} is-invalid {{end}}" autocomplete="off" placeholder="Email" 
+                        name="email" id="email" value="{{$res.Email}}"/>
                     </div>
 
                     <div class="form-group mb-3">
                         <label for="phone">Phone Number:</label>
-                        <input type="text" required class= "form-control" autocomplete="off" placeholder="Phone Number" name="phone" id="phone"/>
+                          {{with .Form.Errors.Get "phone"}}
+                            <label class="text-danger">{{.}}</label>
+                        {{end}}
+                        <input type="text" required class= "form-control {{with .Form.Errors.Get "phone"}} is-invalid {{end}}" autocomplete="off" placeholder="Phone Number" 
+                        name="phone" id="phone" value="{{$res.Phone}}"/>
                     </div>
 
                     <hr>

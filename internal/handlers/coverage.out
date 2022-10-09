@@ -1,0 +1,22 @@
+mode: set
+github.com/codershubham350/bookings/internal/handlers/handlers.go:24.47,28.2 1 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:31.33,33.2 1 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:36.67,42.2 3 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:45.68,57.2 5 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:60.74,68.2 4 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:71.78,73.16 2 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:77.2,91.19 6 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:101.2,102.66 2 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:73.16,76.3 2 0
+github.com/codershubham350/bookings/internal/handlers/handlers.go:91.19,100.3 4 0
+github.com/codershubham350/bookings/internal/handlers/handlers.go:106.71,108.2 1 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:111.69,113.2 1 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:116.75,118.2 1 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:121.79,126.2 3 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:134.79,141.16 3 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:145.2,146.14 2 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:141.16,143.3 1 0
+github.com/codershubham350/bookings/internal/handlers/handlers.go:150.70,152.2 1 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:154.81,156.9 2 1
+github.com/codershubham350/bookings/internal/handlers/handlers.go:163.2,168.4 4 0
+github.com/codershubham350/bookings/internal/handlers/handlers.go:156.9,161.3 4 1
