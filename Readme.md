@@ -16,3 +16,11 @@ Created the bookings and reservations layout using HTML5 and Vanilla JS.
 - Diplaying notifications using [Notie](https://github.com/jaredreich/notie).
 - Uses [Sweetalert2](https://github.com/sweetalert2/sweetalert2) for creating the modals.
 - Uses [govalidator](https://github.com/asaskevich/govalidator) for validating form module.
+
+# Database
+
+Created a Postgres database and made a connection using the Buffalo-SODA.
+
+- Uses [Postgres](https://github.com/postgres/postgres) database for storing the user records and schema.
+- Uses [Soda](https://github.com/gobuffalo/soda) for creating schemas and yml files and interacting with them.
+- For GUI side it is using [DBeaver](https://github.com/dbeaver/dbeaver) for checking up the schemas and records in database.
