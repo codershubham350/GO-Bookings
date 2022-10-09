@@ -19,7 +19,7 @@ Created the bookings and reservations layout using HTML5 and Vanilla JS.
 
 # Database
 
-Created a Postgres database and made a connection using the Buffalo-SODA.
+Using the Postgres database and DBeaver for interaction.
 
 - Uses [Postgres](https://github.com/postgres/postgres) database for storing the user records and schema.
 - Uses [Soda](https://github.com/gobuffalo/soda) for creating schemas and yml files and interacting with them.
