@@ -46,10 +46,10 @@
                 <div class="col">
                     <div class="row" id="reservation-dates-modal">
                         <div class="col">
-                           <input disabled class="form-control" type="text" name="start" id="start" placeholder="Arrival" required/>                            
+                           <input disabled class="form-control" type="text" name="start" id="start" placeholder="Arrival" required autocomplete="off"/>                            
                         </div>
                         <div class="col">
-                           <input disabled class="form-control" type="text" name="end" id="end" placeholder="Departure" required/>                            
+                           <input disabled class="form-control" type="text" name="end" id="end" placeholder="Departure" required autocomplete="off"/>                            
                         </div>
                     </div>
                 </div>    
@@ -65,7 +65,8 @@
             const rp= new DateRangePicker(elem,{
                 format: 'yyyy-mm-dd',
                 showOnFocus:true,
-                orientation: 'top auto'
+                orientation: 'top auto',
+                minDate: new Date(),
             })
             },
           didOpen: () => {
@@ -78,16 +79,33 @@
             const form = document.getElementById("check-availability-form");
             const formData = new FormData(form);
             formData.append("csrf_token", "{{.CSRFToken}}");
+            formData.append("room_id","1");
 
             fetch('/search-availability-json',{
             method: "post",
-            body: formData,
+            body: formData,            
             })
             .then(response=>response.json())
             .then(data=>{
-                console.log(data)
-                console.log(data.ok)
-                console.log(data.message)
+               if (data.ok){
+               attention.custom({
+               icon: 'success',
+               showConfirmButton: false,               
+               html: '<p>Room is available!</p>'
+               + '<p><a href="/book-room?id='
+               + data.room_id
+               + '&s='
+               + data.start_date
+               + '&e='
+               + data.end_date
+               + '"class="btn btn-primary">'
+               + 'Book now!</a></p>',
+               })
+               } else{
+                attention.error({
+                text: "No Availability",
+                })
+               }
             })
         }
         });
