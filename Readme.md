@@ -24,3 +24,11 @@ Using the Postgres database and DBeaver for interaction.
 - Uses [Postgres](https://github.com/postgres/postgres) database for storing the user records and schema.
 - Uses [Soda](https://github.com/gobuffalo/soda) for creating schemas and yml files and interacting with them.
 - For GUI side it is using [DBeaver](https://github.com/dbeaver/dbeaver) for checking up the schemas and records in database.
+
+# Mailings
+
+Using some standard Built-in and 3rd-Party libraries for sending/receiving mails
+
+- Uses [Go Simple Mail](https://github.com/xhit/go-simple-mail) as a 3rd-Party library for sending and receiving mails
+- Uses [MailHog](https://github.com/mailhog/MailHog) as a 3rd-Party library for reading the mails.
+- Uses [Foundation for Emails](https://github.com/foundation/foundation-emails) to make Email more formatted and responsive. Foundation for Emails (previously known as Ink) is a framework for creating responsive HTML emails that work in any email client — even Outlook
