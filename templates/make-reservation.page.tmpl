@@ -26,7 +26,7 @@
                         {{end}}
                         <input type="text" class= "form-control {{with .Form.Errors.Get "first_name"}} is-invalid {{end}}" 
                         required autocomplete="off" placeholder="First Name" name="first_name" 
-                        id="first_name" value="{{$res.FirstName}}" autocomplete="off"/>
+                        id="first_name" value="{{$res.FirstName}}"/>
                     </div>
 
                     <div class="form-group mb-3">
@@ -35,7 +35,7 @@
                             <label class="text-danger">{{.}}</label>
                         {{end}}
                         <input type="text" required class= "form-control {{with .Form.Errors.Get "last_name"}} is-invalid {{end}}" autocomplete="off" 
-                        placeholder="Last Name" name="last_name" id="last_name" value="{{$res.LastName}}" autocomplete="off"/>
+                        placeholder="Last Name" name="last_name" id="last_name" value="{{$res.LastName}}"/>
                      </div>
                                       
 
@@ -44,7 +44,7 @@
                           {{with .Form.Errors.Get "email"}}
                             <label class="text-danger">{{.}}</label>
                         {{end}}
-                        <input type="email" required class= "form-control {{with .Form.Errors.Get "email"}} is-invalid {{end}}" autocomplete="off" placeholder="Email" 
+                        <input type="email" required class= "form-control {{with .Form.Errors.Get "email"}} is-invalid {{end}}" placeholder="Email" 
                         name="email" id="email" value="{{$res.Email}}" autocomplete="off"/>
                     </div>
 
@@ -53,7 +53,7 @@
                           {{with .Form.Errors.Get "phone"}}
                             <label class="text-danger">{{.}}</label>
                         {{end}}
-                        <input type="text" required class= "form-control {{with .Form.Errors.Get "phone"}} is-invalid {{end}}" autocomplete="off" placeholder="Phone Number" 
+                        <input type="text" required class= "form-control {{with .Form.Errors.Get "phone"}} is-invalid {{end}}" placeholder="Phone Number" 
                         name="phone" id="phone" value="{{$res.Phone}}" autocomplete="off"/>
                     </div>
 
